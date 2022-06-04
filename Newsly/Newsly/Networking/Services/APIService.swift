@@ -10,7 +10,7 @@ import Combine
 
 final class APIService : APIClient {
     
-    func request<T>(with endpoint: APIEndpoint, parameters: [String : String]?) -> AnyPublisher<T, APIError> where T : Decodable {
+    func request<T>(with endpoint: APIBuilder, parameters: [String : String]?) -> AnyPublisher<T, APIError> where T : Decodable {
         
         var url = endpoint.url
         

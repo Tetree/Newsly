@@ -1,5 +1,5 @@
 //
-//  APIBuilder.swift
+//  APIEndpoint.swift
 //  Newsly
 //
 //  Created by Nuno Mota on 04/06/2022.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum APIEndpoint {
+enum APIEndpoint : APIBuilder {
     case everything
     case topHeadlines
     case sources
     
-    private var path: String {
+    var path: String {
         switch self {
         case .everything:
             return NetworkConstants.everythingPath

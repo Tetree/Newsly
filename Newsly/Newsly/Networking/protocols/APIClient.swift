@@ -10,6 +10,6 @@ import Combine
 
 protocol APIClient {
     
-    func request<T: Decodable>(with endpoint: APIEndpoint, parameters: [String:String]?) -> AnyPublisher<T, APIError>
+    func request<T: Decodable>(with endpoint: APIBuilder, parameters: [String:String]?) -> AnyPublisher<T, APIError>
     
 }
