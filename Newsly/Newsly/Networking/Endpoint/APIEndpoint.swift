@@ -8,6 +8,7 @@
 import Foundation
 
 enum APIEndpoint : APIBuilder {
+    
     case everything
     case topHeadlines
     case sources

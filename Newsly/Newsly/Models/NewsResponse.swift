@@ -11,11 +11,11 @@ import Foundation
 struct NewsResponse: Codable {
     let status: String
     let totalResults: Int
-    let articles: [NewsSource]
+    let articles: [NewsArticle]
 }
 
 // MARK: - NewsSource
-struct NewsSource: Codable {
+struct NewsArticle: Codable {
     let source: Source
     let author, title, newsSourceDescription: String
     let url: String

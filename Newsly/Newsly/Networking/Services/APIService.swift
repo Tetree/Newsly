@@ -44,9 +44,9 @@ final class APIService : APIClient {
                 }
                 
                 do {
-                    
-                    return try JSONDecoder().decode(T.self, from: data)
-                    
+                    let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .iso8601
+                    return try decoder.decode(T.self, from: data)
                 }catch {
                     throw APIError.invalidResponse
                 }
@@ -62,6 +62,7 @@ final class APIService : APIClient {
                     return APIError.unknown
                 }
             }
+            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
     
