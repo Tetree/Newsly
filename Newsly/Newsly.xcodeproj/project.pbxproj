@@ -21,6 +21,7 @@
 		A4429188284C1B43001DF164 /* APIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4429187284C1B43001DF164 /* APIBuilder.swift */; };
 		A442918A284C1D4A001DF164 /* SourcesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4429189284C1D4A001DF164 /* SourcesResponse.swift */; };
 		A442918D284C20AF001DF164 /* ResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442918C284C20AF001DF164 /* ResultState.swift */; };
+		A4429190284C2170001DF164 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442918F284C2170001DF164 /* NewsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		A4429187284C1B43001DF164 /* APIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBuilder.swift; sourceTree = "<group>"; };
 		A4429189284C1D4A001DF164 /* SourcesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesResponse.swift; sourceTree = "<group>"; };
 		A442918C284C20AF001DF164 /* ResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultState.swift; sourceTree = "<group>"; };
+		A442918F284C2170001DF164 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +73,10 @@
 		A442915E284C1118001DF164 /* Newsly */ = {
 			isa = PBXGroup;
 			children = (
-				A442918B284C20A4001DF164 /* States */,
 				A442916D284C1158001DF164 /* App */,
 				A442916E284C115F001DF164 /* Views */,
+				A442918E284C2152001DF164 /* ViewModels */,
+				A442918B284C20A4001DF164 /* States */,
 				A4429171284C1261001DF164 /* Models */,
 				A4429174284C1398001DF164 /* Networking */,
 				A4429163284C111B001DF164 /* Assets.xcassets */,
@@ -177,6 +180,14 @@
 			path = States;
 			sourceTree = "<group>";
 		};
+		A442918E284C2152001DF164 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A442918F284C2170001DF164 /* NewsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,6 +263,7 @@
 				A442918A284C1D4A001DF164 /* SourcesResponse.swift in Sources */,
 				A442917A284C14D4001DF164 /* NetworkConstants.swift in Sources */,
 				A4429160284C1118001DF164 /* NewslyApp.swift in Sources */,
+				A4429190284C2170001DF164 /* NewsViewModel.swift in Sources */,
 				A4429173284C126E001DF164 /* NewsResponse.swift in Sources */,
 				A4429186284C193A001DF164 /* HTTPMethod.swift in Sources */,
 				A442917D284C16A3001DF164 /* APIClient.swift in Sources */,
