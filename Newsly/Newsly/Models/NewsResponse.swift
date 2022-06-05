@@ -15,7 +15,13 @@ struct NewsResponse: Codable {
 }
 
 // MARK: - NewsSource
-struct NewsArticle: Codable, Identifiable {
+struct NewsArticle: Codable, Identifiable, ViewPresentable {
+    var headline: String { title }
+    
+    var subheadline: String { source.name }
+    
+    var imageURLPath: String { urlToImage }
+    
     var id:String { return title }
     let source: Source
     let author, title, newsSourceDescription: String

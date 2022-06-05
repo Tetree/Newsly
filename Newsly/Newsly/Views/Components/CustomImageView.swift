@@ -9,11 +9,11 @@ import SwiftUI
 import URLImage
 
 struct CustomImageView: View {
-    var article: NewsArticle
+    var imageURLPath: String
     
     var body: some View {
         VStack {
-            if let url = URL(string: article.urlToImage) {
+            if let imageURL = imageURLPath, let url = URL(string: imageURL) {
                 
                 URLImage(url, failure: { error, retry in
                     

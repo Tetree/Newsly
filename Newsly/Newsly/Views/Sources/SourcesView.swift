@@ -1,5 +1,5 @@
 //
-//  HeadlinesView.swift
+//  SourcesView.swift
 //  Newsly
 //
 //  Created by Nuno Mota on 05/06/2022.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct HeadlinesView: View {
+struct SourcesView: View {
     
-    @StateObject var viewmodel: HeadlinesViewModel
+    @StateObject var viewmodel: SourcesViewModel
     
     var body: some View {
         Group {
@@ -19,21 +19,21 @@ struct HeadlinesView: View {
                     .scaleEffect(2)
             case .success:
                 NavigationView {
-                    List(viewmodel.headlines) { headlines in
-                        ArticleRowView(presentable: headlines)
+                    List(viewmodel.sources) { source in
+                        ArticleRowView(presentable: source)
                     }
                 }
                 .navigationBarTitle("News")
             case .failed(let mapper):
-                ErrorView(mapper: mapper, handler: viewmodel.getArticles)
+                ErrorView(mapper: mapper, handler: viewmodel.getSources)
             }
             
-        }.onAppear(perform: viewmodel.getArticles)
+        }.onAppear(perform: viewmodel.getSources)
     }
 }
 
-struct HeadlinesView_Previews: PreviewProvider {
+struct SourcesView_Previews: PreviewProvider {
     static var previews: some View {
-        HeadlinesView(viewmodel: HeadlinesViewModel(client: APIService()))
+        SourcesView(viewmodel: SourcesViewModel(client: APIService()))
     }
 }

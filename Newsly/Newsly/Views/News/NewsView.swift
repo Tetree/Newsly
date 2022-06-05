@@ -20,7 +20,7 @@ struct NewsView: View {
             case .success:
                 NavigationView {
                     List(viewmodel.articles) { article in
-                        ArticleRowView(article: article)
+                        ArticleRowView(presentable: article)
                     }
                 }
                 .navigationBarTitle("News")

@@ -21,7 +21,7 @@ final class SourcesViewModel: ObservableObject {
         self.client = client
     }
     
-    func getArticles() {
+    func getSources() {
         state = .loading
         apiRequest()
             .sink { [weak self] result in

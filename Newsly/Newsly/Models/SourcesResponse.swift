@@ -13,7 +13,12 @@ struct SourcesResponse: Codable {
 }
 
 // MARK: - NewsSource
-struct NewsSource: Codable {
+struct NewsSource: Codable, Identifiable, ViewPresentable {
+    
+    var headline: String { newsSourceDescription }
+    var subheadline: String { name }
+    var imageURLPath: String { url }
+    
     let id, name, newsSourceDescription: String
     let url: String
     let category, language, country: String
