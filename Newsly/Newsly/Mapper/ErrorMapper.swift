@@ -8,8 +8,8 @@
 import Foundation
 
 struct ErrorMapper {
-    private let type: ContentType
-    private let context: APIError
+    let type: ContentType
+    let context: APIError
     
     var errorMessage:String {
         

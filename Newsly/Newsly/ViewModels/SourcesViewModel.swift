@@ -1,5 +1,5 @@
 //
-//  HeadlinesViewModel.swift
+//  SourcesViewModel.swift
 //  Newsly
 //
 //  Created by Nuno Mota on 05/06/2022.
@@ -8,9 +8,9 @@
 import Foundation
 import Combine
 
-final class HeadlinesViewModel: ObservableObject {
+final class SourcesViewModel: ObservableObject {
     
-    private(set) var headlines = [NewsArticle]()
+    private(set) var sources = [NewsSource]()
     @Published private(set) var state:ResultState = .loading
     
     private let client: APIClient
@@ -32,15 +32,14 @@ final class HeadlinesViewModel: ObservableObject {
                     self?.state = .success
                 }
             } receiveValue: { [weak self] response in
-                self?.headlines = response.articles
+                self?.sources = response.sources
                 self?.state = .success
             }
             .store(in: &cancellables)
 
     }
     
-    func apiRequest() -> AnyPublisher<NewsResponse, APIError> {
-        return client.request(with: APIEndpoint.topHeadlines, parameters: nil)
+    func apiRequest() -> AnyPublisher<SourcesResponse, APIError> {
+        return client.request(with: APIEndpoint.sources, parameters: nil)
     }
-    
 }
