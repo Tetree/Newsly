@@ -16,6 +16,7 @@
 		A413D017284D243A00A33DE1 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413D016284D243A00A33DE1 /* CustomImageView.swift */; };
 		A413D019284D25C600A33DE1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413D018284D25C600A33DE1 /* ErrorView.swift */; };
 		A413D01B284D279500A33DE1 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413D01A284D279500A33DE1 /* NewsView.swift */; };
+		A413D01D284D2B3000A33DE1 /* HeadlinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413D01C284D2B3000A33DE1 /* HeadlinesView.swift */; };
 		A4429160284C1118001DF164 /* NewslyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442915F284C1118001DF164 /* NewslyApp.swift */; };
 		A4429164284C111B001DF164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4429163284C111B001DF164 /* Assets.xcassets */; };
 		A4429167284C111B001DF164 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4429166284C111B001DF164 /* Preview Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		A413D016284D243A00A33DE1 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		A413D018284D25C600A33DE1 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A413D01A284D279500A33DE1 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		A413D01C284D2B3000A33DE1 /* HeadlinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesView.swift; sourceTree = "<group>"; };
 		A442915C284C1118001DF164 /* Newsly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A442915F284C1118001DF164 /* NewslyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewslyApp.swift; sourceTree = "<group>"; };
 		A4429163284C111B001DF164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		A413D002284D1A7100A33DE1 /* Headlines */ = {
 			isa = PBXGroup;
 			children = (
+				A413D01C284D2B3000A33DE1 /* HeadlinesView.swift */,
 			);
 			path = Headlines;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				A4429190284C2170001DF164 /* NewsViewModel.swift in Sources */,
 				A413D005284D1ABE00A33DE1 /* HeadlinesViewModel.swift in Sources */,
 				A4429173284C126E001DF164 /* NewsResponse.swift in Sources */,
+				A413D01D284D2B3000A33DE1 /* HeadlinesView.swift in Sources */,
 				A4429186284C193A001DF164 /* HTTPMethod.swift in Sources */,
 				A442917D284C16A3001DF164 /* APIClient.swift in Sources */,
 				A413D00D284D1BFE00A33DE1 /* ErrorMapper.swift in Sources */,
