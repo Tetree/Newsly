@@ -11,7 +11,7 @@ import SwiftUI
 struct NewslyApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            RootView()
         }
     }
 }

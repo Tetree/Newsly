@@ -11,8 +11,7 @@ import Combine
 final class NewsViewModel: ObservableObject {
     
     private(set) var articles = [NewsArticle]()
-    @Published private(set) var loading = false
-    @Published private(set) var state:ResultState<[NewsArticle]> = .loading
+    @Published private(set) var state:ResultState = .loading
     
     private let client: APIClient
     
@@ -28,13 +27,13 @@ final class NewsViewModel: ObservableObject {
             .sink { [weak self] result in
                 switch result {
                 case .failure(let error):
-                    self?.state = .failed(message: "Error")
+                    self?.state = .failed(ErrorMapper(type: .everything, context: error).errorMessage)
                 case .finished:
-                    break
+                    self?.state = .success
                 }
             } receiveValue: { [weak self] response in
                 self?.articles = response.articles
-                self?.state = .success(content: response.articles)
+                self?.state = .success
             }
             .store(in: &cancellables)
 

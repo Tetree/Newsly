@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum ResultState<T: Decodable> {
+enum ResultState {
     case loading
-    case success(content: T)
-    case failed(message: String)
+    case success
+    case failed(String)
 }
