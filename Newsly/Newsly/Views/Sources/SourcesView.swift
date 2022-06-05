@@ -12,18 +12,17 @@ struct SourcesView: View {
     @StateObject var viewmodel: SourcesViewModel
     
     var body: some View {
-        Group {
+        VStack {
             switch viewmodel.state {
             case .loading:
-                ProgressView()
-                    .scaleEffect(2)
+                CustomProgressView()
             case .success:
                 NavigationView {
                     List(viewmodel.sources) { source in
                         ArticleRowView(presentable: source)
                     }
                 }
-                .navigationBarTitle("News")
+                .navigationBarTitle("News Sources")
             case .failed(let mapper):
                 ErrorView(mapper: mapper, handler: viewmodel.getSources)
             }

@@ -9,7 +9,22 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            NewsView(viewmodel: NewsViewModel(client: APIService()))
+                .tabItem {
+                    Image(systemName: "house")
+                }
+            
+            HeadlinesView(viewmodel: HeadlinesViewModel(client: APIService()))
+                .tabItem {
+                    Image(systemName: "exclamationmark.circle.fill")
+                }
+            
+            SourcesView(viewmodel: SourcesViewModel(client: APIService()))
+                .tabItem {
+                    Image(systemName: "person.wave.2.fill")
+                }
+        }
     }
 }
 

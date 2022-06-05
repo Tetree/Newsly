@@ -12,18 +12,17 @@ struct HeadlinesView: View {
     @StateObject var viewmodel: HeadlinesViewModel
     
     var body: some View {
-        Group {
+        VStack {
             switch viewmodel.state {
             case .loading:
-                ProgressView()
-                    .scaleEffect(2)
+                CustomProgressView()
             case .success:
                 NavigationView {
                     List(viewmodel.headlines) { headlines in
                         ArticleRowView(presentable: headlines)
                     }
                 }
-                .navigationBarTitle("News")
+                .navigationBarTitle("Top Headlines")
             case .failed(let mapper):
                 ErrorView(mapper: mapper, handler: viewmodel.getArticles)
             }

@@ -12,11 +12,11 @@ struct NewsView: View {
     @StateObject var viewmodel: NewsViewModel
     
     var body: some View {
-        Group {
+        VStack {
             switch viewmodel.state {
             case .loading:
-                ProgressView()
-                    .scaleEffect(2)
+                CustomProgressView()
+                
             case .success:
                 NavigationView {
                     List(viewmodel.articles) { article in
@@ -28,7 +28,8 @@ struct NewsView: View {
                 ErrorView(mapper: mapper, handler: viewmodel.getArticles)
             }
             
-        }.onAppear(perform: viewmodel.getArticles)
+        }
+        .onAppear(perform: viewmodel.getArticles)
     }
 }
 

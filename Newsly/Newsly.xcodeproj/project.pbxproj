@@ -35,6 +35,7 @@
 		A442918A284C1D4A001DF164 /* SourcesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4429189284C1D4A001DF164 /* SourcesResponse.swift */; };
 		A442918D284C20AF001DF164 /* ResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442918C284C20AF001DF164 /* ResultState.swift */; };
 		A4429190284C2170001DF164 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442918F284C2170001DF164 /* NewsViewModel.swift */; };
+		A462EBD8284D5741000C2371 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462EBD7284D5741000C2371 /* CustomProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		A4429189284C1D4A001DF164 /* SourcesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesResponse.swift; sourceTree = "<group>"; };
 		A442918C284C20AF001DF164 /* ResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultState.swift; sourceTree = "<group>"; };
 		A442918F284C2170001DF164 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		A462EBD7284D5741000C2371 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				A413D016284D243A00A33DE1 /* CustomImageView.swift */,
 				A413D018284D25C600A33DE1 /* ErrorView.swift */,
 				A413D020284D2BC500A33DE1 /* SourcesRowView.swift */,
+				A462EBD7284D5741000C2371 /* CustomProgressView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				A413D01B284D279500A33DE1 /* NewsView.swift in Sources */,
 				A442917A284C14D4001DF164 /* NetworkConstants.swift in Sources */,
 				A4429160284C1118001DF164 /* NewslyApp.swift in Sources */,
+				A462EBD8284D5741000C2371 /* CustomProgressView.swift in Sources */,
 				A413D00B284D1B7B00A33DE1 /* ContentType.swift in Sources */,
 				A4429190284C2170001DF164 /* NewsViewModel.swift in Sources */,
 				A413D005284D1ABE00A33DE1 /* HeadlinesViewModel.swift in Sources */,
