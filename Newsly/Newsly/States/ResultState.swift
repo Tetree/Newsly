@@ -10,5 +10,5 @@ import Foundation
 enum ResultState {
     case loading
     case success
-    case failed(String)
+    case failed(ErrorMapper)
 }

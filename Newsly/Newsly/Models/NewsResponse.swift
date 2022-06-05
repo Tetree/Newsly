@@ -15,7 +15,8 @@ struct NewsResponse: Codable {
 }
 
 // MARK: - NewsSource
-struct NewsArticle: Codable {
+struct NewsArticle: Codable, Identifiable {
+    var id:String { return title }
     let source: Source
     let author, title, newsSourceDescription: String
     let url: String

@@ -9,7 +9,7 @@ import SwiftUI
 import URLImage
 
 
-struct NewsViewRow: View {
+struct ArticleRowView: View {
     
     let article: NewsArticle
     
@@ -33,11 +33,11 @@ struct NewsViewRow: View {
     }
 }
 
-struct NewsViewRow_Previews: PreviewProvider {
+struct ArticleRowView_Previews: PreviewProvider {
     
     static let article = NewsArticle(source: Source(id: nil, name: "MSNBC"), author: "Nuno", title: "Covid-19 cases increasing in western Europe", newsSourceDescription: "A reputable source of news", url: "https://www.msnbc.com", urlToImage: "https://media-cldnry.s-nbcnews.com/image/upload/t_focal-1120x560,f_auto,q_auto:best/newscms/2022_22/3555211/220601-flint-michigan-voters-an.jpg", publishedAt: Date(), content: "This is the content")
     
     static var previews: some View {
-        NewsViewRow(article: article)
+        ArticleRowView(article: article)
     }
 }

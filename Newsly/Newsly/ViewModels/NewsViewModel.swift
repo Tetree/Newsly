@@ -27,7 +27,7 @@ final class NewsViewModel: ObservableObject {
             .sink { [weak self] result in
                 switch result {
                 case .failure(let error):
-                    self?.state = .failed(ErrorMapper(type: .everything, context: error).errorMessage)
+                    self?.state = .failed(ErrorMapper(type: .everything, context: error))
                 case .finished:
                     self?.state = .success
                 }
