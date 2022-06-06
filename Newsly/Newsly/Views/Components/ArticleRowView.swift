@@ -27,6 +27,9 @@ struct ArticleRowView: View {
                     .foregroundColor(.gray)
             }
         }
+        .listRowSeparator(.hidden)
+        .listRowBackground(Color.clear)
+        .frame(maxWidth: .infinity)
         .padding()
         .background(.gray.opacity(0.1))
         .cornerRadius(30)
@@ -39,5 +42,6 @@ struct ArticleRowView_Previews: PreviewProvider {
     
     static var previews: some View {
         ArticleRowView(presentable: article)
+            .previewLayout(.sizeThatFits)
     }
 }

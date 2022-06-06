@@ -22,8 +22,10 @@ struct NewsView: View {
                     List(viewmodel.articles) { article in
                         ArticleRowView(presentable: article)
                     }
+                    .frame(maxWidth: .infinity)
+                    .navigationBarTitle("News")
                 }
-                .navigationBarTitle("News")
+               
             case .failed(let mapper):
                 ErrorView(mapper: mapper, handler: viewmodel.getArticles)
             }
